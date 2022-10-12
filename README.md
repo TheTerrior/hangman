@@ -1,10 +1,10 @@
 # Hangman
-The game of Hangman implemented in several programming languages. To run it in any of these, you need that language as the dependency. No outside modules are used, so the language is the only dependency. 
+The game of Hangman implemented in several programming languages. Naturally, to run it in any of these, you need that language as the dependency. No outside modules are used.
 
-To run, simply do:
+To run, make sure Python is installed and simply do:
 
-    make [language]
+    python run.py [language]
 
-where the language is lowercased, and this will run Hangman in the language of choice.
+and this will run Hangman in the language of choice.
 
 I hope you learn something, I definitely have from making these.
