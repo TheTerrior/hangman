@@ -5,6 +5,6 @@ To run, simply do:
 
     make [language]
 
-and this will run Hangman in the language of choice.
+where the language is lowercased, and this will run Hangman in the language of choice.
 
 I hope you learn something, I definitely have from making these.
