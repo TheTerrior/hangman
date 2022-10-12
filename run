@@ -1,0 +1,28 @@
+#!/bin/bash
+
+target=$(echo $1 | tr '[:upper:]' '[:lower:]')
+if [ $# != 1 ]; then
+	echo "Please enter exactly one option"
+elif [ $target = "c" ]; then
+	echo "running c"
+elif [ $target = "c++" ]; then
+	echo "running c++"
+elif [ $target = "elixir" ]; then
+	echo "running elixir"
+elif [ $target = "go" ]; then
+	echo "running go"
+elif [ $target = "haskell" ]; then
+	echo "running haskell"
+elif [ $target = "julia" ]; then
+	echo "running julia"
+elif [ $target = "kotlin" ]; then
+	echo "running kotlin"
+elif [ $target = "ocaml" ]; then
+	echo "running ocaml"
+elif [ $target = "python" ]; then
+	echo "running python"
+elif [ $target = "rust" ]; then
+	echo "running rust"
+else
+	echo "Please enter a valid option"
+fi
