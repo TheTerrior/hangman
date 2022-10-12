@@ -7,17 +7,19 @@ To run, make sure Python is installed and simply do:
 
 and this will run Hangman in the language of choice.
 
-Languages:
+Languages:<br>
 Ready: N/A
 
-WIP:
-C
-C++
-Elixir
-Go
-Haskell
-Kotlin
-Python
+WIP:<br>
+C<br>
+C++<br>
+Elixir<br>
+Go<br>
+Haskell<br>
+Julia<br>
+Kotlin<br>
+OCaml<br>
+Python<br>
 Rust
 
 I hope you learn something, I definitely have from making these.
