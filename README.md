@@ -20,6 +20,7 @@ Julia<br>
 Kotlin<br>
 OCaml<br>
 Python<br>
+Ruby<br>
 Rust
 
 I hope you learn something, I definitely have from making these.
