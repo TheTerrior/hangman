@@ -21,6 +21,10 @@ elif [ $target = "ocaml" ]; then
 	echo "running ocaml"
 elif [ $target = "python" ]; then
 	echo "running python"
+	if [ -f "./aack" ]; then
+		rm aack
+	fi
+	python hangman.py
 elif [ $target = "rust" ]; then
 	echo "running rust"
 else
