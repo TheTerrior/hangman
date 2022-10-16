@@ -1,13 +1,42 @@
 import os
 import sys
-from typing import List, Dict
+from typing import List, Dict, Union
+from dataclasses import dataclass
 
 
 # Global variables
-lives: int = 6  #starting amount of lives
 base_chars: str = "abcdefghijklmnopqrstuvwxyzñ" #characters that will be hidden
 special_chars: Dict[str, str] = {"à":"a", "è":"e", "ì":"i", "ò":"o", "ù":"u"} #characters that are mapped to base characters
 punctuation: str = "!@#$%^&*()_+-=[]{}\\|;:'\",<.>/? `~"    #characters that will be shown by default
+
+
+# Will hold information about a character in the guessing string
+@dataclass
+class HChar:
+    letter: str
+    guessed: bool
+    
+    # Called when it needs to display
+    def display(self) -> str:
+        if self.guessed:
+            return " " + self.letter
+        return " _"
+
+# Same as HChar but for punctuation specifically
+@dataclass
+class HPunc:
+    letter: str
+    
+    # Called when it needs to display
+    def display(self) -> str:
+        return self.letter
+
+# Will hold all information about the game, can be passed around
+@dataclass
+class GameInfo:
+    word: str
+    chars: List[Union[HChar, HPunc]]
+    lives: int
 
 
 # Gets user input, and verifies before returning
@@ -27,6 +56,15 @@ def user_input(message: str) -> str:
 
     #return once we are out of the loop
     return input_str
+
+
+def display_ui(game: GameInfo, status: str):
+    print(status)
+    print(f"Lives: {game.lives}")
+    accum: str = ""
+
+    for i in range(len(game.chars)):
+        accum += char.display
 
 
 # Initializes new games, asks the user if another game should be initiated
